@@ -59,7 +59,7 @@ plugins:
 
 author:
   name   : "jawo Laray"
-  avatar : "/assets/images/FB_IMG_1688271423861.jpg"
+  avatar : "/assets/images/bio-photo.jpg"
   bio    : "My awesome biography constrained to a sentence or two goes here."
   links:
     - label: "Website"
