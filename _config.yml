@@ -60,7 +60,7 @@ plugins:
 author:
   name   : "jawo Laray"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  bio    : "Knowing how to motivate yourself can help you accomplish anything you set your mind to."
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
