@@ -51,7 +51,7 @@ npm install threads tiny-worker
 <details>
 <summary>Run on node.js</summary>
 
-<p></p>
+<p> </p>
 
 Running code using threads.js in node works out of the box.
 
