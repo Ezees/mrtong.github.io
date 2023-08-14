@@ -6,8 +6,8 @@ collection: about
 entries_layout: grid
 classes: wide
 ---
-
-   <body class="is-preload">
+  <body>
+<div class="is-preload">
     <!-- Wrapper -->
     <div id="wrapper">
       <!-- Intro -->
@@ -593,12 +593,6 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
         </footer>
       </section>
 
-      <!-- Copyright -->
-      <div class="copyright">
-        &copy; Ezees. All rights reserved.Design:
-        <a href="/">Mr.Tong</a>.
-      </div>
-    </div>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
@@ -608,4 +602,3 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
-</html>
