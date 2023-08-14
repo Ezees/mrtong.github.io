@@ -74,6 +74,9 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/mrtong26"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      # url:
 
 footer:
   links:
@@ -86,6 +89,9 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/mrtong26"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      # url:
 
 defaults:
   # _posts
