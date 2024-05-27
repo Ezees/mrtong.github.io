@@ -1,32 +1,157 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Mr.tong
-email:
-description: >- # this means to ignore newlines until "baseurl:"
-  Knowing how to motivate yourself can help you accomplish anything you set your mind to, so let’s get to that next with some quotes to inspire you. . You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-twitter_username: werty35169010
-github_username: Ezees
-minimal_mistakes_skin: default
-search: true
+theme                    : "minimal"
+minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
-# Build settings
-markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
+# Site Settings
+locale                   : "en-US"
+title                    : "Ezees 26"
+title_separator          : "-"
+subtitle                 : "Development Test Site"
+name                     : " Jawo Laray"
+description              : "Ezees 26 theme test."
+url                      : # the base hostname & protocol for your site e.g. "https://Ezees.github.io"
+baseurl                  : "/test"
+repository               : "Ezees/ezees.github.io/"
+teaser                   : #"path of fallback teaser image, e.g. /assets/images/500x300.png"
+logo                     : #"/assets/images/apple-touch-icon.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+masthead_title           : "Custom Title" # overrides the website title displayed in the masthead, use " " for no title
+breadcrumbs            : true (default)
+words_per_minute         : 200
+comments:
+provider               : "default" #false (default), "disqus", "discourse","facebook", "staticman", "utterances", "giscus", "custom"
+disqus:
+  shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+  discourse:
+    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
+  facebook:
+    # https://developers.facebook.com/docs/plugins/comments
+    appid                :
+    num_posts            : # 5 (default)
+    colorscheme          : # "light" (default), "dark"
+  utterances:
+    theme                : # "github-light" (default), "github-dark"
+    issue_term           : # "pathname" (default)
+  giscus:
+    repo_id              : # Shown during giscus setup at https://giscus.app
+    category_name        : # Full text name of the category
+    category_id          : # Shown during giscus setup at https://giscus.app
+    discussion_term      : # "pathname" (default), "url", "title", "og:title"
+    reactions_enabled    : # '1' for enabled (default), '0' for disabled
+    theme                : # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
+  staticman:
+    branch               : # "master"
+    endpoint             : # "https://{your Staticman v3 API}/v3/entry/github/"
+atom_feed:
+  path                   : # blank (default) uses feed.xml
+search                   : true # true, false (default)
+search_full_content      : true # true, false (default)
+search_provider          : "lunr"
+lunr:
+  search_within_pages    : true
+algolia:
+  application_id         : #"QB6HVGBSBA"
+  index_name             : #"dev_minimal-mistakes"
+  search_only_api_key    : #9d5014e5bbc77372547bce778dfa5663"
+  powered_by             : true
+
+# SEO Related
+google_site_verification :
+bing_site_verification   :
+yandex_site_verification :
+
+# Social Sharing
+twitter:
+  username               : "mrtongprints"
+facebook:
+  username               : "Mrtong26"
+  app_id                 :
+  publisher              :
+og_image                 : "/assets/images/bio-photo.jpg"
+# For specifying social profiles
+# - https://developers.google.com/structured-data/customize/social-profiles
+social:
+  type                   : # Person or Organization (defaults to Person)
+  name                   : # If the user or organization name differs from the site's name
+  links: # An array of links to social media profiles
+    - https://twitter.com/
+    - https://github.com/
+
+# Analytics
+analytics:
+  provider               : false # false (default), "google", "google-universal", "google-gtag", "custom"
+  google:
+    tracking_id          :
+
+
+# Site Author
+author:
+  name             : "Jawo Laray"
+  avatar           : "/assets/images/bio-photo.jpg"
+  bio              : "I am an **amazing** person."
+  location         : "Somewhere"
+  links:
+    - label: "Your Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://Ezees.github.io"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://Ezees.github.io/"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/"
+
+
+# Site Footer
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/"
+
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - Rakefile
+  - README
+  - tmp
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
 # Liquid
 strict_front_matter: true
 liquid:
@@ -51,38 +176,19 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
-include:
-  - .htaccess
-  - _pages
-exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - vendor
-  - .asset-cache
-  - .bundle
-  - .jekyll-assets-cache
-  - .sass-cache
-  - assets/js/plugins
-  - assets/js/_main.js
-  - assets/js/vendor
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
 
 # Plugins (previously gems:)
 plugins:
@@ -90,44 +196,53 @@ plugins:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
-  - jemoji
   - jekyll-include-cache
 
-author:
-  name   : "jawo Laray"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Knowing how to motivate yourself can help you accomplish anything you set your mind to."
-  links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/@werty35169010"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://Ezees/github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/mrtong26"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url:
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
 
-footer:
-  links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/@werty35169010"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://Ezees/github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/mrtong26"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url:
+
+# Archives
+#  Type
+#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
+#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
+#  Path (examples)
+#  - Archive page should exist at path when using Liquid method or you can
+#    expect broken links (especially with breadcrumbs enabled)
+#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
+#  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
+#  - <base_path>/my-awesome-category/index.html ~> path: /
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+# https://github.com/jekyll/jekyll-archives
+# jekyll-archives:
+#   enabled:
+#     - categories
+#     - tags
+#   layouts:
+#     category: archive-taxonomy
+#     tag: archive-taxonomy
+#   permalinks:
+#     category: /categories/:name/
+#     tag: /tags/:name/
+
+
+# HTML Compression
+# - http://jch.penibelst.de/
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
 
 # Collections
 collections:
@@ -142,7 +257,7 @@ collections:
     permalink: /:collection/:path/
 
 
-
+# Defaults
 defaults:
   # _posts
   - scope:
@@ -152,7 +267,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: true
       share: true
       related: true
   # _pages
@@ -188,19 +302,17 @@ defaults:
       share: true
 
 
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
- enabled:
-     - categories
-     - tags
- layouts:
- category: archive-taxonomy
- tag: archive-taxonomy
- permalinks:
- category: /categories/:name/
- tag: /tags/:name/ 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
