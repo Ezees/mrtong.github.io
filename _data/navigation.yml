@@ -7,3 +7,11 @@ main:
     url: /tags/
   - title: "About"
     url: /about/
+  - title: "Game"
+    url: /games/
+  - title: "Apk"
+    url: /apk/
+  - title: "Video"
+    url: /video/
+  - title: "Resorces"
+    url: /resorces/
