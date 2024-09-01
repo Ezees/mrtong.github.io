@@ -110,7 +110,7 @@ avatar: "assets/img/avatar.jpg"
 # boolean type, the global switch for TOC in posts.
 toc: true
 
-comments:
+comments: true
   active: 
 disqus:
 shortname: https-ezees-github-io-mrtong-github-io 
