@@ -11,7 +11,6 @@
 
 twitter_username: werty35169010
 github_username:  Ezees
-# google_analytics: 
 description:   List of community-curated resources to find topical remote freelance & contract work for software developers, web designers, and more!
 baseurl: "https://ezees.github.io/mrtong.github.io/" 
 
@@ -24,15 +23,11 @@ twitter_username: werty35169010
 github_username:  Ezees
 layouts_dir: _layouts
 paginate: 10
-# defaults:
- 
-    # scope:
-    # path: ""
-    #  type: "posts"
-    # values:
-    #  layout: "default"
-# Build settings
-theme_mode: # [light|dark]
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
 defaults:
   - scope:
       path: "" # An empty string here means all files in the project
@@ -65,7 +60,6 @@ defaults:
 
 sass:
   style: compressed
-
 
 compress_html:
   clippings: all
@@ -139,11 +133,12 @@ exclude:
   - .gitignore
 
 
-jekyll-archives:
-  enabled: [categories, tags]
+enabled: [categories, tags]
   layouts:
     category: category
     tag: tag
+    about: about
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+    about: /about/:name/
