@@ -1,0 +1,237 @@
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<div class="{{ include.type | default: 'list' }}__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    {% if include.type == "grid" and teaser %}
+      <div class="archive__item-teaser">
+        <img src="{{ teaser | relative_url }}" alt="">
+      </div>
+    {% endif %}
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      {% if post.link %}
+        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+      {% else %}
+        <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
+      {% endif %}
+    </h2>
+    {% include page__meta.html type=include.type %}
+    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
+  </article>
+</div>
+
+<style>
+	
+
+
+.image-grid {
+	display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 2px;
+    padding: 2px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.close {
+    positi on: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+.image-grid img{
+	width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+</style>
+
+<script>
+function openPopup(popupId) {
+    document.getElementById(popupId).style.display = 'flex';
+}
+
+
+function togglePopup(popupId, show) {
+    const displayStyle = show ? 'flex' : 'none';
+    const popup = document.getElementById(popupId);
+    if (popup) popup.style.display = displayStyle;
+}
+
+window.onclick = function(event) {
+    if (event.target.classList.contains('popup')) {
+        event.target.style.display = 'none';
+    }
+};
+function closePopup(popupId) {
+    const popup = document.getElementById(popupId);
+    if (popup) {
+        popup.style.display = 'none'; // Hide the popup
+    }
+}
+
+
+
+// Close popups when clicking outside of them
+window.onclick = function(event) {
+    const popups = document.getElementsByClassName('popup');
+    for (let i = 0; i < popups.length; i++) {
+        if (event.target == popups[i]) {
+            popups[i].style.display = 'none';
+        }
+    }
+};
+    </script>
+
+
+
+
+<link rel="stylesheet" href="" />
+
+
+<!--container of img visible -->
+ <!-- show image below -->
+        <!-- start visible on grid container -->
+    <div class="image-grid">
+        <img class="visible" src="https://images.11029984.com/wsd-images-prod/wk777tlbf3/merchant_resource/appdownloadicon/wps_WK777-512_appicon_20240303173627.jpg" onclick="openPopup('wk777')" />
+        
+
+
+<!--container of img visible -->
+ <!-- show image below -->
+        <!-- start visible on grid container -->
+        <img class="visible" src="https://gwfd.qatgwawm.net/system-requirement/Web.Mobile/WH171-01.Mobile/Content/Views/Shared/images/logo.png" onclick="openPopup('agg779')" />
+        
+
+<!--container of img visible -->
+ <!-- show image below -->
+        <!-- start visible on grid container -->
+        <img class="visible" src="https://download.ocms.cloud/v2/jln/Picture.3?version=3" onclick="openPopup('jilino1')" />
+        
+
+
+<!--container of img visible -->
+ <!-- show image below -->
+        <!-- start visible on grid container -->
+        <img class="visible" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuc83lXmX55_B1YZQTldbUWihv5pbW4Jr2GA&amp;usqp" onclick="openPopup('swerty99')" />
+        
+
+<!--container of img visible -->
+ <!-- show image below -->
+        <!-- start visible on grid container -->
+        <img class="visible" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHWNM28vYXUmyiMy4H6fCcyj_Y39uweEh-gyCOilX9gme0SCGxrm2tAi33saEDAC21XW_jXk883bZ7BgiYOwT_X5d66dsHEvnpc2SfqEyl_hwHyLs3MVxI18jz9jmt7wQivkg2ulrwOjoRGVqu4eDlUH3WTj-4a1fDKrByqg6fPJ0IdeveHh7pBo8sRVk/s200/milyon88-.png" onclick="openPopup('milyon88')" />
+        
+
+    
+<!--container of img visible -->
+ <!-- show image below -->
+        <!-- start visible on grid container -->
+        <img class="visible" src="https://gwfd.qatgwawm.net/system-requirement/Web.Mobile/WK693-01.Mobile/Content/Views/Shared/images/logo.png" onclick="openPopup('234win')" />
+        
+    <img class="visible" src="https://images.b332411.com:42666/wsd-images-prod/ezwinf2/merchant_resource/appdownloadicon/wps_icon2_20230827012006.png" onclick="openPopup(&#39;ezewin&#39;)" />
+        
+
+ <!-- show image below -->
+        <!-- start visible on grid container -->
+        <img class="visible" src="https://images.11029984.com/wsd-images-prod/ayalaf3/merchant_resource/appdownloadicon/wps_512_x_512_Ayalawin_Option_1_-_App_Icon_20240214220045.png" onclick="openPopup('ayala2024')" />
+        
+
+
+
+<!--container of img visible -->
+ <!-- show image below -->
+        <!-- start visible on grid container -->
+        <img class="visible" src="https://images.11029984.com/wsd-images-prod/phmayaf3/merchant_resource/appdownloadicon/wps_152_20240317143741.png" onclick="openPopup('phmaya')" />
+        
+
+  
+
+<!--container of img visible -->
+ <!-- show image below -->
+        <!-- start visible on grid container -->
+        <img class="visible" src="https://images.11029984.com/wsd-images-prod/wagif3/merchant_resource/appdownloadicon/wps_icon_20240207170246.png" onclick="openPopup('wgi777')" />
+        
+
+ <!-- show image below -->
+        <!-- start visible on grid container -->
+        <img class="visible" src="https://images.11029984.com/wsd-images-prod/win88f3/merchant_resource/appdownloadicon/wps_123132_20240404204030.png" onclick="openPopup('win888')" />
+        
+
+ <!-- show image below -->
+        <!-- start visible on grid container -->
+        <img class="visible" src="https://images.11029984.com/wsd-images-prod/kuyaplayf3/merchant_resource/appdownloadicon/wps_App_Icon_512x512_20240202171744.png" onclick="openPopup('kuyaplay')" />
+        
+
+ <!-- show image below -->
+        <!-- start visible on grid container -->
+        <img class="visible" src="https://images.11029984.com/wsd-images-prod/we1winphf3/merchant_resource/appdownloadicon/wps_APP_Icon_(3)_20231208172453.png" onclick="openPopup('we1win')" />
+        
+
+ <!-- show image below -->
+        <!-- start visible on grid container -->
+        <img class="visible" src="https://images.6929183.com/wsd-images-prod/akowin/merchant_resource/appdownloadicon/wps_icon-512_20230928203823.png" onclick="openPopup('int')" />
+        
+
+ 
+   <!-- show image below -->
+        <!-- start visible on grid container -->
+        <img class="visible" src="https://images.11029984.com/wsd-images-prod/phcityf3/merchant_resource/appdownloadicon/app_download_icon_phcityf3_20240606192432.png" onclick="openPopup('phcity')" />
+        
+
+ 
+   
+      <img class="visible" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQQuqPWq5Gd5a2HGH2vE8qxvPw9qOEis8Kxg" onclick="openPopup('okebet')" />
+        <!-- Add more images as needed -->
+
+    
+
+
+     <img class="visible" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIObWvl0O_1oas0PYp0HHRYVhJsD57B5f-Tw&amp;usqp=CAU" onclick="openPopup('8k8')" />
+
+<img class="visible" src="https://cms-ph.imgix.net/live/image/logo/20240115-142522_aT1x240115062555.png?auto=format,compress&amp;q=60&amp;blur=0&amp;w=&amp;h=40" onclick="openPopup(&#39;spinsbet&#39;)" />
+
+
+<img class="visible" src="https://images.1248593.com/wsd-images-prod/phhalikf4/merchant_resource/appdownloadicon/app_download_icon_phhalikf4_20240521154038.png" onclick="openPopup(&#39;phhalik&#39;)" />
+
+
+<img class="visible" src="https://images.11029984.com/wsd-images-prod/bet41f3/merchant_resource/appdownloadicon/wps_bet41f3_app_20240506171711.png" onclick="openPopup(&#39;plusph&#39;)" />
+
+<img class="visible" src="https://images.11029984.com/wsd-images-prod/agilaf3/merchant_resource/appdownloadicon/wps_appicon_512_x_512__20240404181243.png" onclick="openPopup(&#39;agilaclub&#39;)" />
+
+</div>
