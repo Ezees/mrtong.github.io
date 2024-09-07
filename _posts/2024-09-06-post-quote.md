@@ -12,10 +12,10 @@ tags:
   
 > <cite><a href="https://jawolaray.blogspot.com/">Blogspot</a></cite>
 
-
+\assets\images
 <div class="image-grid">
-  <img src="path/to/image1.jpg" class="grid-image" alt="Image 1" onclick="showPopup('path/to/image1.jpg')">
-  <img src="path/to/image2.jpg" class="grid-image" alt="Image 2" onclick="showPopup('path/to/image2.jpg')">
+  <img src="assets/images/gif-box.jpg" class="grid-image" alt="Image 1" onclick="showPopup('/assets/images/gif-box.jpg')">
+  <img src="assets/images/gif-box.jpg" class="grid-image" alt="Image 2" onclick="showPopup('/assets/images/bio-photo.png')">
   <img src="path/to/image3.jpg" class="grid-image" alt="Image 3" onclick="showPopup('path/to/image3.jpg')">
   <img src="path/to/image4.jpg" class="grid-image" alt="Image 4" onclick="showPopup('path/to/image4.jpg')">
   <img src="path/to/image5.jpg" class="grid-image" alt="Image 5" onclick="showPopup('path/to/image5.jpg')">
