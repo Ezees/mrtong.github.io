@@ -14,7 +14,7 @@ tags:
 
 \assets\images
 <div class="image-grid">
-  <img src="assets/images/gif-box.jpg" class="grid-image" alt="Image 1" onclick="showPopup('/assets/images/gif-box.jpg')">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHWNM28vYXUmyiMy4H6fCcyj_Y39uweEh-gyCOilX9gme0SCGxrm2tAi33saEDAC21XW_jXk883bZ7BgiYOwT_X5d66dsHEvnpc2SfqEyl_hwHyLs3MVxI18jz9jmt7wQivkg2ulrwOjoRGVqu4eDlUH3WTj-4a1fDKrByqg6fPJ0IdeveHh7pBo8sRVk/s200/milyon88-.png" class="grid-image" alt="Image 1" onclick="showPopup('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHWNM28vYXUmyiMy4H6fCcyj_Y39uweEh-gyCOilX9gme0SCGxrm2tAi33saEDAC21XW_jXk883bZ7BgiYOwT_X5d66dsHEvnpc2SfqEyl_hwHyLs3MVxI18jz9jmt7wQivkg2ulrwOjoRGVqu4eDlUH3WTj-4a1fDKrByqg6fPJ0IdeveHh7pBo8sRVk/s200/milyon88-.png')">
   <img src="assets/images/gif-box.jpg" class="grid-image" alt="Image 2" onclick="showPopup('/assets/images/bio-photo.png')">
   <img src="path/to/image3.jpg" class="grid-image" alt="Image 3" onclick="showPopup('path/to/image3.jpg')">
   <img src="path/to/image4.jpg" class="grid-image" alt="Image 4" onclick="showPopup('path/to/image4.jpg')">
