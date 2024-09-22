@@ -1,0 +1,283 @@
+---
+layout: articles
+titles:
+  # @start locale config
+  en      : &EN       Home
+  # @end locale config
+show_title: false
+articles:
+  data_source: paginator.posts
+  article_type: BlogPosting
+  show_cover: false
+  show_excerpt: true
+  show_readmore: true
+  show_info: true
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>{{ HOME.title }}</title>
+  <meta name="description" content="{{ page.desc }}">
+  <meta name="author" content="{{ author }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:description" content="{{ page.desc }}">
+  <meta property="og:image" content="{{ site.url }}{{ page.image }}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@werty35169010">
+  <meta name="twitter:creator" content="@werty35169010">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ page.desc }}">
+  <meta name="twitter:image" content="{{ site.url }}{{ page.image }}">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <meta name="google-site-verification" content="" />
+  
+  <meta name="theme-color" content="#212121">
+  <meta name="application-name" content="ezees"/>
+  <meta name="msapplication-TileColor" content="#021212" />
+  <meta name="msapplication-TileImage" content="{{ site.url }}/images/favicons/mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="{{ site.url }}/images/favicons/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="{{ site.url }}/images/favicons/mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="{{ site.url }}/images/favicons/mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="{{ site.url }}/images/favicons/mstile-310x310.png" />
+  
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ site.url }}/images/favicons/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.url }}/images/favicons/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site.url }}/images/favicons/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.url }}/images/favicons/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="{{ site.url }}/images/favicons/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ site.url }}/images/favicons/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{ site.url }}/images/favicons/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ site.url }}/images/favicons/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="{{ site.url }}/images/favicons/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="{{ site.url }}/images/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="{{ site.url }}/images/favicons/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="{{ site.url }}/images/favicons/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="{{ site.url }}/images/favicons/favicon-128.png" sizes="128x128" />
+  <link rel="shortcut icon" type="image/x-icon" href="{{ site.url }}/favicon.ico">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "name": "{{ page.title }}",
+      "url": "{{ site.url }}{{ page.url }}",
+      "logo": "{{ site.url }}/images/a-logo.jpg",
+      "image":"{{ site.url }}{{ page.image }}",
+      "headline": {{ page.title | jsonify }},
+      "datePublished": {{ page.date | jsonify }},
+      "dateModified": {{ page.last_modified_at | default: page.date | jsonify }},
+      "author":{
+        "@type":"Person",
+        "name":"{{ site.author }}",
+        "url":"{{ site.url }}{{ page.url }}"
+      },
+      "mainEntityOfPage":{
+        "@type":"WebPage",
+        "@id":"{{ site.url }}"
+      }
+    }
+  </script>
+
+  <style>html { visibility: hidden; opacity: 0; }</style>
+
+  {% if page.url != '/about/' %}
+  <link rel="stylesheet" href="{{ site.url }}/css/main.css" media="print" onload="this.media='all'">
+  {% else %}
+  <link rel="stylesheet" href="{{ site.url }}/css/main.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="https://unpkg.com/flickity/dist/flickity.min.css" media="print" onload="this.media='all'">
+  {% endif %}
+</head>
+
+<body>
+
+  <header class="container my-5">
+    <div class="columns-1 w-max flex flex-row mx-5">
+    	  <a href="{{ site.url }}" class="m-2">
+        <img class="avatar"alt="avatar">
+      </a></a>
+
+      <h1 class="text-white text-glow self-center">Mr.TonG's Blog</h1>
+    </div>
+<div class="layout--home">
+  {%- include paginator.html -%}
+</div>
+
+    <div class="columns-2 flex flex-col lg:flex-row basis-1/2 mt-5 mx-5">
+      <div class="flex-1 flex flex-row justify-around self-center space-between w-full">
+        <a href="https://ezees.github.io" target="_blank">
+          <img src="{{ site.url }}/images/svg/github.svg" alt="ezees github" class="rounded-full sm-circle hover:drop-shadow-md bg-c-gray">
+        </a>
+        <a href="https://www.youtube.com/c/mrtong26" target="_blank">
+          <img src="{{ site.url }}/images/svg/youtube.svg" alt="ezees youtube" class="rounded-full sm-circle hover:drop-shadow-md bg-c-gray">
+        </a>
+        <a href="https://www.linkedin.com/in/mrtongp/" target="_blank">
+          <img src="{{ site.url }}/images/svg/linkedin.svg" alt="ezees linkedin" class="rounded-full sm-circle hover:drop-shadow-md bg-c-gray">
+        </a>
+        <a href="https://twitter.com/ezees" target="_blank">
+          <img src="{{ site.url }}/images/svg/twitter.svg" alt="ezees twitter" class="rounded-full sm-circle hover:drop-shadow-md bg-c-gray">
+        </a>
+        <a href="https://t.me/ezees" target="_blank">
+          <img src="{{ site.url }}/images/svg/telegram.svg" alt="ezees telegram" class="rounded-full sm-circle hover:drop-shadow-md bg-c-gray">
+        </a>
+        <a href="https://ezees.github.io/feed.xml" target="_blank">
+          <img src="{{ site.url }}/images/svg/rss.svg" alt="ezees rss" class="rounded-full sm-circle hover:drop-shadow-md bg-c-gray">
+        </a>
+      </div>
+
+      <div class="lg:columns-2 flex gap-5 flex-row p-3 basis-1/2">
+        <button class="text-cyan-400 rounded-md bg-c-gray flex-1 p-3 w-full hover:drop-shadow-md m-shadow" onclick="window.open('https://discord.gg/UM92zUn')">Discord</button>
+        <button class="text-cyan-400 rounded-md bg-c-gray flex-1 p-3 w-full hover:drop-shadow-md m-shadow" onclick="window.location.href='{{ site.url }}/about/'">whoami</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container flex flex-col my-5">
+      {{ content }}
+    </div>
+
+    {% if page.url == '/' %}
+    
+    <div class="fixed search-btn m-5">
+      <button aria-label="search" class="modal-trigger circle-btn glow" data-modal="search-box">
+        <img height="24px" width="24px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAADLUlEQVRoge2YT0tUURjG3zMj6Kgk2KoGJDBJtCDBXYv+QAuJCgrEhTu/gW6MElr0DcJFKz9AIITiwqAioSRMN22CSER0jBahRTVp/lqcO3TmzJ3rPdczM0nzrO49cJ7nec99z7nve0TqqOP/hvJFBDSKSFZE2kQkLyLbSqkNX/zeAaSBAeAR8B7YoxRfgRfAXaCz1p5FRARIAcPAaojhKOwD00B3Lc33A8uOxm3sApNAc7XNDwHfQ1Z1EbgDXABOAU1AO9AL3ECnWC4kkCUgWy3z44FZE7PA2Zjz08AIsG5xbAI9lTY/ZJnfBq4n5MoAU1YQH4Djvn0XBPuttFn1sWLAmLUoz4AGH55NkRTw1hDZiZsyMfkfWF9i1Bd3QWDYEkiUNhH8qWAfmanZ7ou8geJzftYLcalOJ5A3dCZ8EQ8YpL+Bc16Iw7UeGlofgcOXN+izu4BFDz6jtPqsVO1zmZ8qM37JeH6S3N7BUEqtiMhaGe0DURIA0CQiZuH1Mpk1J5gaTidd2BfIikjaeN9M4sgRZtnd4TIxLIBW633L2Y47chH6kQgLYM96b3K2444W4/mby8SwAL5Y7yed7bjjhPH82WViWAA5KV6FanRSp41npza0JAClFCKybAxdS2gqFtCNzUVjaMEH6T3jx5ID0gfPSqx1y9D6BRzzQdpJcbk74sFrmI4C3hg6cz7Jpw3idSDjjfyvxqBVRlz2Sd6NbsALmPJGrvk7gE8G/yuf/AWRSWuFxjzxtgIrBu9PKlHxonvYJUNoH91JlSsC43B2WOYBxn36tgWz6NsDE7M43rQFG3bQSpsC5iuxx0zxHvTtgYk8uhmJrN+BFuA2xadNGBIFEbv7QV99PBaRsJNiTXRJvCH6T94sujzoEl3f28byInJfRK6IyFVj/KmI3FRK/YjrywnoXnkU3YAnxWuCDYveY/NVTadAuB2YQPewcbALzBFyzh82iEM10OgG/LzoNOkV3Yy0iS4Gt0Sn04KIPFdK7UTwZES3rtVLJ98AGim+J6pOOvlEPYh/BWU29kytfTmhTBBnau3LCUEQM4H5d+g7q6MHoOvImq+jjgrjD2ynTrObdlSTAAAAAElFTkSuQmCC" alt="search ezees blogs">
+      </button>
+    </div>
+
+    <div id="search-box" class="modal">
+      <div class="modal-content container tr-dark glow h-auto w-full lg:w-3/5 m-5 p-5 rounded-md" tabindex="-1">
+        <button class="circle-btn glow float-right modal-close m-10">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAgUlEQVRIx+2UMQ6AIBAEiX+4xCdY4P8r4h+k8DljIYUxIiBgNLIVxbJ7dwunVMM/AQzABPQRXAEMMKYYGDZYQALi1nFNioEAs7u4nHUSw7ltki1+JVRM3DNnezhLlrink6TKuyIVvHZEVUOu+kyrf7QnVoV2JsEQd8tO38qi4ftYAR2/iAqKWJdNAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIwLTA1LTE5VDA5OjQ5OjEwKzAwOjAwbzh86wAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMC0wNS0xOVQwOTo0OToxMCswMDowMB5lxFcAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAAAAElFTkSuQmCC">
+        </button>
+        <input type="text" id="search-input" placeholder="Search..." class="w-full bg-transparent mx-auto my-5 text-white">
+        <ul id="results-container" class="text-lg font-bold text-emerald-400"></ul>
+      </div>
+    </div>
+    {% endif %}
+  </main>
+
+  <footer class="glow">
+    <div class="container flex flex-col mx-auto">
+      <ul class="pagination flex flex-row content-center justify-center m-3">
+        {% if paginator.previous_page %}
+          <li class="m-2"><a href="{{ paginator.previous_page_path }}"><img height= "36px" width="36px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAdklEQVRYw+3VOQqAMBRFUYfGHduppfsRHFZmea2E8MFG1Bfk3S5F4PBDkqJwzjn3bsAAjGpHijnTogIGYALqXDAL0BiTO2Y15gtMdWPPHtalZDJpQBumtMmOzKgHULoblzsqPgez7HO9mFQnxYRJ9WqHc879pgPVEUzX8o5ZzQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMC0wNS0xOVQwOTo0MDo1OSswMDowMIL/HAgAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjAtMDUtMTlUMDk6NDA6NTkrMDA6MDDzoqS0AAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAABJRU5ErkJggg==" alt="previous-page"></a></li>
+        {% else %}
+          <li class="m-2 w-9 h-9"></li>
+        {% endif %}
+        {% if paginator.page %}
+          <li class="active bg-cyan-400 w-9 h-9 m-2 flex content-center justify-center">
+            <span class="my-1.5 text-black font-black">{{ paginator.page }}/{{ paginator.total_pages }}</span>
+          </li>
+        {% endif %}
+        {% if paginator.next_page %}
+          <li class="m-2"><a href="{{ paginator.next_page_path }}"><img height= "36px" width="36px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAb0lEQVRYw+3VMQqAMBBE0WjAI9smpdcxglez/FaCLmmE4Aac36V7TLEJQSmlVJuADCzejjvmyhcFRGDjWfZGTcBqUO5LCfUGVYT6CjU2dg3mfXiuY29TEqZHTBGmgonA3tvnOrsvU0El92WUUuoPnTEnTNd6fqlgAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIwLTA1LTE5VDA5OjQyOjQ4KzAwOjAw7NfHHwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMC0wNS0xOVQwOTo0Mjo0OCswMDowMJ2Kf6MAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAAAAElFTkSuQmCC" alt="next-page"></a></li>
+        {% else %}
+        <li class="m-2 w-9 h-9"></li>
+        {% endif %}
+      </ul>
+      <div class="flex justify-center content-center">
+        <span class="text-white">init : july 4 2024</span>
+      </div>
+    </div>
+	
+<h4>It is now  
+<script type="text/javascript">
+<!--
+var currentTime = new Date()
+var hours = currentTime.getHours()
+var minutes = currentTime.getMinutes()
+if (minutes < 10){
+minutes = "0" + minutes
+}
+document.write(hours + ":" + minutes + " ")
+if(hours > 11){
+document.write("PM")
+} else {
+document.write("AM")
+}
+//-->
+</script>
+</h4>
+
+<h4>AT 
+<script type="text/javascript">
+<!--
+var currentTime = new Date()
+var month = currentTime.getMonth() + 1
+var day = currentTime.getDate()
+var year = currentTime.getFullYear()
+document.write(month + "/" + day + "/" + year)
+//-->
+</script>
+</h4>
+  </footer>
+
+  <script async src="{{ site.url }}/js/lazysizes.min.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GGYRHYVYBV"></script>
+  <script async src="https://www.google-analytics.com/analytics.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GGYRHYVYBV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-GGYRHYVYBV");
+  </script>
+
+
+  {% if page.url == '/' %}
+
+  <script async type="text/javascript" src="{{ site.url }}/js/search.js" onload="init_search()"></script>
+  <script>
+    function init_search() {
+      window.simpleJekyllSearch = new SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '{{ site.url }}/search.json',
+        success: function () {}
+      })
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.modal-trigger');
+      elems.forEach(function (trigger) {
+        trigger.addEventListener('click', function (event) {
+          event.preventDefault();
+          const modal = document.getElementById(trigger.dataset.modal);
+          modal.classList.add('open', 'backdrop-blur');
+          document.getElementById('search-input').focus();
+          const exits = modal.querySelectorAll('.modal-close');
+          exits.forEach(function (exit) {
+            exit.addEventListener('click', function (event) {
+              event.preventDefault();
+              modal.classList.remove('open', 'backdrop-blur');
+            });
+            document.addEventListener('keyup', function(e) {
+              if (e.keyCode == 27) {
+                modal.classList.remove('open', 'backdrop-blur');
+              }
+            });
+          });
+        });
+      });
+    });
+  </script>
+  <script>
+  {%- include scripts/home.js -%}
+</script>
+
+{{ content }}
+  {% endif %}
+</body>
+</html>
+
